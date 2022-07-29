@@ -11,15 +11,12 @@ import lombok.*;
  * Author:ybc
  * Description:
  */
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@EqualsAndHashCode
+// 不生成有参，无参需要自己添加
+@Data
 public class User {
 
 
-    @TableId("uid")
+
     private Long id;
 
     private String name;
