@@ -9,9 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Map;
 
 
-@Repository
+@Repository // 将当前标注成持久层
 public interface UserMapper extends BaseMapper<User> {
-
 
 
 }

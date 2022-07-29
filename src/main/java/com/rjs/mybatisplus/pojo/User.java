@@ -6,11 +6,6 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.*;
 
-/**
- * Date:2022/2/12
- * Author:ybc
- * Description:
- */
 // 不生成有参，无参需要自己添加
 @Data
 public class User {
