@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Date:2022/2/12
@@ -95,10 +96,10 @@ public class MyBatisPlusTest {
         users.forEach(System.out::println);*/
         //查询所有数据
         //SELECT id,name,age,email FROM user
-        List<User> users = userMapper.selectList(null);
-        users.forEach(System.out::println);
-        /*Map<String, Object> map = userMapper.selectMapById(1L);
-        System.out.println(map);*/
+//        List<User> users = userMapper.selectList(null);
+//        users.forEach(System.out::println);
+        Map<String, Object> map = userMapper.selectMapById(1L);
+        System.out.println(map);
     }
 
 }

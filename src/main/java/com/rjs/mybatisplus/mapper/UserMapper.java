@@ -6,11 +6,13 @@ import com.rjs.mybatisplus.pojo.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Map;
 
 
 @Repository // 将当前标注成持久层
 public interface UserMapper extends BaseMapper<User> {
 
+    Map<String, Object> selectMapById(Long id);
 
 }
