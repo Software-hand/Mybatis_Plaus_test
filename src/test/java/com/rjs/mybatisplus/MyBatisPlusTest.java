@@ -41,7 +41,7 @@ public class MyBatisPlusTest {
         user.setEmail("zhangsan@atguigu.com");
         int result = userMapper.insert(user);
         System.out.println("result:"+result);
-        System.out.println("id:"+user.getId());
+        System.out.println("id:"+user.getUid());
     }
 
     @Test
@@ -69,7 +69,7 @@ public class MyBatisPlusTest {
         //修改用户信息
         //UPDATE user SET name=?, email=? WHERE id=?
         User user = new User();
-        user.setId(4L);
+        user.setUid(4L);
         user.setName("李四");
         user.setEmail("lisi@atguigu.com");
         int result = userMapper.updateById(user);
@@ -98,8 +98,8 @@ public class MyBatisPlusTest {
         //SELECT id,name,age,email FROM user
 //        List<User> users = userMapper.selectList(null);
 //        users.forEach(System.out::println);
-        Map<String, Object> map = userMapper.selectMapById(1L);
-        System.out.println(map);
+//        Map<String, Object> map = userMapper.selectMapById(1L);
+//        System.out.println(map);
     }
 
 }

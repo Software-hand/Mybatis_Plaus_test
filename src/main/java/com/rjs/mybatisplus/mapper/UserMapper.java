@@ -12,7 +12,11 @@ import java.util.Map;
 
 @Repository // 将当前标注成持久层
 public interface UserMapper extends BaseMapper<User> {
-
+    /**
+     * 根据id查询用户信息为map集合
+     * @param id
+     * @return
+     */
     Map<String, Object> selectMapById(Long id);
 
 }

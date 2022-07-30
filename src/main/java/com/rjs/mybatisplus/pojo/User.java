@@ -1,18 +1,18 @@
 package com.rjs.mybatisplus.pojo;
 
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.*;
 
 // 不生成有参，无参需要自己添加
 @Data
+// 设置实体类所对应表名
+// @TableName("t_user")
 public class User {
 
-
-
-    private Long id;
+    // 将这个属性所对应的字段为主键， Spring 默认将id作为主键
+    @TableId(value = "id",type = IdType.AUTO)
+    private Long uid;
 
     private String name;
 
