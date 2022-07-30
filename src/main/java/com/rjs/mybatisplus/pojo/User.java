@@ -11,9 +11,10 @@ import lombok.*;
 public class User {
 
     // 将这个属性所对应的字段为主键， Spring 默认将id作为主键
-    @TableId(value = "id",type = IdType.AUTO)
+    // @TableId(value = "id",type = IdType.AUTO)
     private Long uid;
 
+    @TableField("name")
     private String name;
 
     private Integer age;
