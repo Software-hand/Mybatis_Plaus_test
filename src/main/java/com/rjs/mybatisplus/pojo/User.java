@@ -2,6 +2,7 @@ package com.rjs.mybatisplus.pojo;
 
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.rjs.mybatisplus.enums.SexEnum;
 import lombok.*;
 
 // 不生成有参，无参需要自己添加
@@ -21,6 +22,8 @@ public class User {
     private Integer age;
 
     private String email;
+
+    private SexEnum sex;
 
     @TableLogic
     private Integer isDeleted;

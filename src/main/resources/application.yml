@@ -21,4 +21,4 @@ mybatis-plus:
   # 配置类型别名所对应的包  驼峰转下划线！
   type-aliases-package: com.rjs.mybatisplus.pojo
   # 扫描通用枚举的包
-  # type-enums-package: com.rjs.mybatisplus.enums
+  type-enums-package: com.rjs.mybatisplus.enums
