@@ -44,7 +44,7 @@ public class MyBatisPlusWrapperTest {
         //SELECT uid AS id,user_name AS name,age,email,is_deleted FROM t_user WHERE is_deleted=0 ORDER BY age DESC,uid ASC
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.orderByDesc("age")
-                .orderByAsc("uid");
+                .orderByAsc("id");
         List<User> list = userMapper.selectList(queryWrapper);
         list.forEach(System.out::println);
     }
@@ -148,7 +148,8 @@ public class MyBatisPlusWrapperTest {
         Integer ageBegin = null;
         Integer ageEnd = 30;
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.like(StringUtils.isNotBlank(username), "user_name", username)
+        // 省略if 相比较上一个查询09
+        queryWrapper.like(StringUtils.isNotBlank(username), "name", username)
                 .ge(ageBegin != null, "age", ageBegin)
                 .le(ageEnd != null, "age", ageEnd);
         List<User> list = userMapper.selectList(queryWrapper);

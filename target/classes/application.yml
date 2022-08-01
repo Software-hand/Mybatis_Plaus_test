@@ -18,7 +18,7 @@ mybatis-plus:
     # 设置实体类所对应的表的统一前缀
       # table-prefix: t_
       # 设置统一的主键生成策略
-  # 配置类型别名所对应的包
+  # 配置类型别名所对应的包  驼峰转下划线！
   type-aliases-package: com.rjs.mybatisplus.pojo
   # 扫描通用枚举的包
   # type-enums-package: com.rjs.mybatisplus.enums
