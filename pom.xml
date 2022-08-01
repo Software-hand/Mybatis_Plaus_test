@@ -49,6 +49,7 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!--逆向工程-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
