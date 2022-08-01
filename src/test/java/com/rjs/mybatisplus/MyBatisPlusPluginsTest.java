@@ -60,14 +60,14 @@ public class MyBatisPlusPluginsTest {
         productMapper.updateById(productLi);
         //小王将商品价格-30
         productWang.setPrice(productWang.getPrice()-30);
-
-//        int result = productMapper.updateById(productWang);
-//        if(result == 0){
-//            //操作失败，重试
-//            Product productNew = productMapper.selectById(1);
-//            productNew.setPrice(productNew.getPrice()-30);
-//            productMapper.updateById(productNew);
-//        }
+        // 判定受影响行为0，则再执行一次
+        int result = productMapper.updateById(productWang);
+        if(result == 0){
+            //操作失败，重试 再次创建一次新的SQL
+            Product productNew = productMapper.selectById(1);
+            productNew.setPrice(productNew.getPrice()-30);
+            productMapper.updateById(productNew);
+        }
         //老板查询商品价格
         Product productLaoban = productMapper.selectById(1);
         System.out.println("老板查询的商品价格："+productLaoban.getPrice());
