@@ -12,14 +12,18 @@ public class User {
 
     // 将这个属性所对应的字段为主键， Spring 默认将id作为主键
     // @TableId(value = "id",type = IdType.AUTO)
-    private Long uid;
+    private Long id;
 
     @TableField("name")
     private String name;
 
+
     private Integer age;
 
     private String email;
+
+    @TableLogic
+    private Integer isDeleted;
 
 
 
